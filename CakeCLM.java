@@ -59,11 +59,9 @@ public class CakeCLM {
             System.out.println("Resetting CoNsole..");
             CoNsole resetcon = new CoNsole();
             resetcon.loadCLM();
-        //} else if (currentCommand.equals("ticker")) {
-          //  Scanner newTicker = new Scanner(System.in);
-          //  System.out.print("!!!FOR THIS SESSION ONLY!!!\nSet a new CLM ticker (default: '@>'): ");
-          //  ticker = newTicker.next();
-          //  CLM();
+        } else if (currentCommand.equals("cakemars")){
+            CakeMars cmars_play = new CakeMars();
+            cmars_play.CakeMarsInit();
         } else if (currentCommand.equals("matrix") || currentCommand.equals("caketrix")) {
             CakeTrix caketrix_ini=new CakeTrix();
             caketrix_ini.caketrix_main();
