@@ -20,7 +20,7 @@ public class CakeCLM {
             compiledAgo = "today";
         } else if (compiledAgoNum < 2) {
             compiledAgo = "yesterday";
-        };
+        }
         Scanner cmdReader = new Scanner(System.in);
         System.out.print("@> ");
         String currentCommand = cmdReader.next();
@@ -73,7 +73,7 @@ public class CakeCLM {
         } else {
             System.out.println("Command syntax not recognized. Please try again.");
             CLM();
-        };
+        }
     }
     static void brief(){
         Scanner briefReader = new Scanner(System.in);
@@ -127,12 +127,12 @@ public class CakeCLM {
             System.out.println("Spams your screen with green 0s and 1s. *Will not stop*. Crash it manually using Ctrl+C.");
             System.out.println("Aliases: 'matrix' 'caketrix'");
             CLM();
-        //} else if(currentBrief.equals("multi")) {
-        //    System.out.println("MULTI    - Add-On Command");
-        //    System.out.println("Usage: multi");
-        //    System.out.println("Multiplies a number by an inputted range until it reaches the double limit, and as you might imagine this reaches a very high value quickly. Like, 300-numbers-long-very high.");
-        //    System.out.println("Aliases: 'multi'");
-        //    CLM();
+        } else if(currentBrief.equals("multi")) {
+            System.out.println("MULTI    - Add-On Command");
+            System.out.println("Usage: multi");
+            System.out.println("Multiplies a number by an inputted range until it reaches the double limit, and as you might imagine this reaches a very high value quickly. Like, 300-numbers-long-very high.");
+            System.out.println("Aliases: 'multi'");
+            CLM();
         } else {
           System.out.println("Could not find your command. Please try again");
           brief();
