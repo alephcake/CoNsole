@@ -4,15 +4,15 @@ import java.time.temporal.*;
 
 public class CakeCLM {
 
-    public static final String ANSI_RESET = "\u001B[0m";
-    public static final String ANSI_BLACK = "\u001B[30m";
-    public static final String ANSI_RED = "\u001B[31m";
-    public static final String ANSI_GREEN = "\u001B[32m";
-    public static final String ANSI_YELLOW = "\u001B[33m";
-    public static final String ANSI_BLUE = "\u001B[34m";
-    public static final String ANSI_PURPLE = "\u001B[35m";
-    public static final String ANSI_CYAN = "\u001B[36m";
-    public static final String ANSI_WHITE = "\u001B[37m";
+    public static final String ANSI_RESET = "\u001B[0m"; //7
+    public static final String ANSI_BLACK = "\u001B[30m"; //0
+    public static final String ANSI_RED = "\u001B[31m"; //1
+    public static final String ANSI_GREEN = "\u001B[32m"; //2
+    public static final String ANSI_YELLOW = "\u001B[33m";//4
+    public static final String ANSI_BLUE = "\u001B[34m"; //3
+    public static final String ANSI_PURPLE = "\u001B[35m";//6
+    public static final String ANSI_CYAN = "\u001B[36m";//5
+    public static final String ANSI_WHITE = "\u001B[37m";//8
 
     public static void CmdLoaderModule(){
         System.out.println(ANSI_RED + "CoNsole Command Loader Module\nCakeCLM (c) 2022 Cake Co.\n" + ANSI_WHITE + "Please enter a command." + ANSI_CYAN + " \"help\"" + ANSI_WHITE + " for a list of commands.");
@@ -47,8 +47,10 @@ public class CakeCLM {
             System.out.println("  version  - Displays extended CoNsole and CLM version.");
             System.out.println("  maze     - Creates a maze out of blocks.");
             System.out.println("  diagonal - Creates a maze out of diagonals.");
-            System.out.println("  exit     - Exits CoNsole.");
+            System.out.println("  multi    - Randomly multiplies a number until infinity.");
             System.out.println("  matrix   - Act like you're hacking the mainframe or something.");
+            System.out.println("  cakemars - Space Text Adventure game. [UNFINISHED]");
+            System.out.println("  exit     - Exits CoNsole.");
             CLM();
         } else if (currentCommand.equals("version")) {
             System.out.println("Cake Co. CoNsole " + v_CoNsole);
@@ -141,6 +143,12 @@ public class CakeCLM {
             System.out.println("Usage: multi");
             System.out.println("Multiplies a number by an inputted range until it reaches the double limit, and as you might imagine this reaches a very high value quickly. Like, 300-numbers-long-very high.");
             System.out.println("Aliases: 'multi'");
+            CLM();
+        } else if(currentBrief.equals("cakemars")) {
+            System.out.println("CAKEMARS - Add-On Command");
+            System.out.println("Usage: cakemars");
+            System.out.println("You've recently been fired from your job as an assistant for a small import/export management business. With nothing holding you on Mars, you decide to grab your last bits of money to purchase a starship. After all, you know business very well and you have nothing to lose. Space text adventure game. Unfinished.");
+            System.out.println("Aliases: 'cakemars'");
             CLM();
         } else {
           System.out.println("Could not find your command. Please try again");
