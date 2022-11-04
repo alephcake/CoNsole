@@ -3,13 +3,24 @@ import java.time.*;
 import java.time.temporal.*;
 
 public class CakeCLM {
+
+    public static final String ANSI_RESET = "\u001B[0m";
+    public static final String ANSI_BLACK = "\u001B[30m";
+    public static final String ANSI_RED = "\u001B[31m";
+    public static final String ANSI_GREEN = "\u001B[32m";
+    public static final String ANSI_YELLOW = "\u001B[33m";
+    public static final String ANSI_BLUE = "\u001B[34m";
+    public static final String ANSI_PURPLE = "\u001B[35m";
+    public static final String ANSI_CYAN = "\u001B[36m";
+    public static final String ANSI_WHITE = "\u001B[37m";
+
     public static void CmdLoaderModule(){
-        System.out.println("CoNsole Command Loader Module\nPlease enter a command. \"help\" for a list of commands.");
+        System.out.println(ANSI_RED + "CoNsole Command Loader Module\nCakeCLM (c) 2022 Cake Co.\n" + ANSI_WHITE + "Please enter a command." + ANSI_CYAN + " \"help\"" + ANSI_WHITE + " for a list of commands.");
         CLM();
     }
     public static void CLM(){
         String v_CoNsole = "v0.1.2.5c";
-        String v_CommandLoaderModule = "v1.3.4";
+        String v_CommandLoaderModule = "v1.400";
         LocalDate compiledDate = LocalDate.of(2022, 10, 18);
         LocalDate today = LocalDate.now();
         long compiledAgoNum = ChronoUnit.DAYS.between(compiledDate, today);
@@ -22,7 +33,7 @@ public class CakeCLM {
             compiledAgo = "yesterday";
         }
         Scanner cmdReader = new Scanner(System.in);
-        System.out.print("@> ");
+        System.out.print(ANSI_YELLOW + "@> " + ANSI_RESET);
         String currentCommand = cmdReader.next();
         // System.out.println("The command you inputted was " + currentCommand);
         if(currentCommand.equals("ver")){
